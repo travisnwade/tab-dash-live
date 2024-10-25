@@ -10,6 +10,7 @@
 - **✨ Random Quotes** – Enlightening (?) dev quotes pop up for those who think they needed inspiration but maybe didn’t.
 - **🎬 Backgrounds** – Choose from glitchy videos that make you look way more legit than you are.
 - **🎶 Sounds** - Mouse, keyboard and epic sounds to make it sound like you're actually working.
+- **🙈 Hide the UI** - Hide and show the UI by pressing "H". Chads can full screen with F11, then "H". 🤓
 
 ## Deploy to Netlify
 
@@ -32,12 +33,12 @@ Once it's deployed, literally just:
 
 1. Open your instance of tab dash in a browser.
 2. Embrace it's infinite uselessness.
-3. ???
+3. ??? 💀
 4. Profit? (No guarantees.)
 
 ## License
 
-Free as a bird (MIT License).
+Free as a bird 🐤 (MIT License).
 
 ## Tech used
 
