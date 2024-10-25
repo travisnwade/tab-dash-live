@@ -1,0 +1,78 @@
+.breadcrumb {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+
+.breadcrumb-item {
+    font-family: 'Courier New', Courier, monospace;
+    color: #00FF00;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+a#bc-link {
+    text-decoration: none; /* Remove the default underline */
+    color: inherit; /* Inherit color from parent element */
+    transition: text-shadow 0.3s ease; /* Smooth transition for the glow effect */
+}
+
+a#bc-link:hover {
+    text-shadow: 0 0px 10px rgba(0, 255, 0, 1); /* Slight green glow on hover */
+}
+
+.breadcrumb-item.separator {
+    margin: 0 5px; /* Space around the separator */
+}
+
+.breadcrumb-item.current {
+    font-weight: bold; /* Optional: Make the current page bold */
+}
+
+/* Increase line-height for paragraphs on the About page */
+#about-container p {
+    line-height: 1.5; /* Adjust this value as needed */
+}
+
+/* Style for the Home button */
+.menu-button {
+    display: inline-flex;
+    align-items: center;
+    padding: 10px;
+    background-color: #002200;
+    color: #00FF00;
+    border: 1px solid #00FF00;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1rem;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    border-radius: 0; /* Square corners */
+}
+
+.menu-button:hover {
+    background-color: #004400;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.menu-button i {
+    margin-right: 5px; /* Space between icon and text */
+    transition: transform 0.2s ease;
+}
+
+.menu-button.spin i {
+    animation: spin 1s linear infinite; /* Fast spin animation */
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}

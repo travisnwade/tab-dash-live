@@ -1,0 +1,340 @@
+/* General Styles */
+body {
+    background-color: black;
+    color: #00FF00;
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    height: 100vh;
+}
+
+a {
+    text-decoration: none;
+    color: inherit; /* Optional: Inherit the text color from the parent element */
+}
+
+a:hover {
+    text-decoration: underline; /* Optional: Add underline on hover if desired */
+}
+
+
+/* Scrollbar Styling */
+body::-webkit-scrollbar {
+    width: 8px;
+}
+
+body::-webkit-scrollbar-track {
+    background: #002200;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #00FF00;
+    border-radius: 10px;
+    border: 2px solid #002200;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+    background-color: #00FF00;
+}
+
+/* Headings */
+h1 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+/* Menu Icon Styles */
+.menu-icon {
+    display: inline-block;
+    margin-right: 10px;
+    font-size: 1.5rem; /* Matches the H1 font size */
+    cursor: pointer;
+    color: #00FF00;
+    transition: color 0.3s ease;
+    z-index: 9999; /* Very high z-index to ensure it's on top */
+    position: relative; /* Necessary for z-index to work */
+}
+
+.menu-icon:hover {
+    color: #004400; /* Same hover effect as .copy-ip */
+}
+
+/* Menu Modal */
+
+#menu-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.95); /* Black background with 20% opacity */
+    z-index: 9998; /* Below the menu icon but above other content */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Menu Container */
+#menu-container {
+    width: 600px;
+    text-align: left;
+    font-family: 'Courier New', Courier, monospace;
+    color: #00FF00;
+    background-color: transparent; /* No background */
+    z-index: 9997; /* Below the modal overlay but above the rest of the content */
+}
+
+/* Instruction Text */
+#close-instruction {
+    font-size: 12px;
+    text-align: center;
+    color: #00FF00;
+    font-family: 'Courier New', Courier, monospace;
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 9999; /* Ensure it's on top of everything in the modal */
+}
+
+.menu-item {
+    font-size: 2rem; /* Large font size for menu items */
+    margin: 10px 0;
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.menu-item::before {
+    content: "";
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    background-color: #00FF00; /* Green square bullet point */
+    margin-right: 10px;
+}
+
+/* Time and Date */
+.time, .date {
+    font-size: 3.3rem;
+    line-height: 1.2;
+    text-shadow: 0 0 12px rgba(0, 255, 0, 1), 0 0 20px rgba(0, 255, 0, 0.8);
+}
+
+.date {
+    margin: 0 0 10px;
+}
+
+/* IP Address Styles */
+.ip-container {
+    display: flex;
+    align-items: center;
+}
+
+.ip-address {
+    font-size: 1.5rem;
+    margin: 10px 0;
+    font-weight: bold;
+}
+
+.copy-ip {
+    font-size: 1.5rem;
+    background-color: unset;
+    border: none;
+    margin-left: 10px;
+    cursor: pointer;
+    color: #00FF00;
+    padding: 5px;
+    transition: color 0.3s ease;
+}
+
+.copy-ip:hover {
+    color: #004400;
+}
+
+/* Quotes */
+.quote {
+    margin-top: 20px;
+}
+
+.quote-box {
+    background-color: #002200;
+    border: 1px solid #00FF00;
+    padding: 10px;
+    font-family: 'Courier New', Courier, monospace;
+    white-space: normal;
+    word-wrap: break-word;
+    margin: 20px 0 20px 0;
+}
+
+#quote {
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+}
+
+/* Blinking Cursor */
+.blinking-cursor {
+    font-weight: bold;
+    font-size: 1.5rem;
+    animation: blink 1s step-end infinite;
+    opacity: 50%;
+    margin-left: 10px;
+}
+
+/* Background Video */
+#background-video {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1;
+    background-size: cover;
+    animation: fadeInOut 10s infinite;
+}
+
+/* Black Overlay */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 0;
+}
+
+/* Container */
+.container {
+    position: relative;
+    z-index: 1;
+    width: 90%;
+    max-width: 600px;
+    margin: 0 20px;
+    text-align: left;
+    padding: 0 0 20px 0;
+}
+
+/* Video and Audio Buttons */
+.video-buttons, .audio-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 20px 0 20px 0;
+}
+
+.video-button, .audio-button {
+    flex: 1 1 calc(25% - 10px);
+    padding: 10px;
+    background-color: #002200;
+    color: #00FF00;
+    border: 1px solid #00FF00;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1rem;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s ease;
+    border-radius: 0;
+}
+
+.video-button:hover, .audio-button:hover {
+    background-color: #004400;
+}
+
+/* Environment Details */
+.env-title {
+    margin: 10px 0 10px 0;
+    color: #00FF00;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.env-copy-icon {
+    font-size: inherit;
+    background-color: unset;
+    cursor: pointer;
+    border: none;
+    margin: unset;
+}
+
+.env-copy-icon:hover {
+    background-color: unset;
+    color: #004400;
+}
+
+.browser-info, .os-info, .network-info {
+    color: #00FF00;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.browser-info div, .os-info div, .network-info div {
+    margin-top: 5px;
+}
+
+/* Highlighted Text */
+::selection {
+    background-color: #131313;
+    color: #e7e7e7;
+}
+
+/* Keyframes */
+@keyframes blink {
+    from, to {
+        color: transparent;
+    }
+    50% {
+        color: #00FF00;
+    }
+}
+
+@keyframes fadeInOut {
+    0% { opacity: 0; }
+    10% { opacity: 1; }
+    90% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .time, .date {
+        font-size: 2.5rem;
+    }
+
+    .container {
+        margin: 10px 20px;
+        padding: 0 0 20px 0;
+    }
+}
+
+@media (max-width: 600px) {
+    .time, .date {
+        font-size: 2rem;
+    }
+
+    h1, .ip-address {
+        font-size: 1.2rem;
+    }
+
+    .video-button, .audio-button {
+        flex: 1 1 calc(50% - 10px);
+    }
+}
+
+/* Responsive Menu for Mobile (Less than 600px) */
+@media (max-width: 600px) {
+    #menu-container {
+        width: 90%; /* Make the menu container take up most of the screen width */
+        padding: 20px;
+        margin: 0;
+    }
+
+    .menu-item {
+        font-size: 1.5rem; /* Slightly smaller font size for mobile */
+    }
+}

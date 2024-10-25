@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tab Dash - Passive Tab for Devs and SysAdmins</title>
+
+    <!-- Assets and Styles -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Tab Dash - Browser Tab with your public IP address, date, time, quotes and other nerdy bits of info with customization options.">
+    <meta name="author" content="A beautiful human"> <!-- your name, or whatever -->
+    <link rel="canonical" href="https://yourdomain.lol/"> <!-- Put your actual domain here you scrub -->
+
+    <!------------------------------------------ 
+    Don't forget, replace https://yourdomain.lol 
+    with your actual domain so the shit works
+    like it is supposed to.    
+    ------------------------------------------->
+
+    <!-- Open Graph Meta Tags for Social Sharing -->
+    <meta property="og:title" content="Tab Dash - Passive Tab for Devs and SysAdmins">
+    <meta property="og:description" content="Tab Dash - Browser Tab with your public IP address, date, time, quotes and other nerdy bits of info with customization options.">
+    <meta property="og:image" content="https://yourdomain.lol/images/bg.jpg">
+    <meta property="og:url" content="https://yourdomain.lol/">
+    <meta property="og:type" content="website">
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Tab Dash - Passive Tab for Devs and SysAdmins">
+    <meta name="twitter:description" content="Tab Dash - Browser Tab with your public IP address, date, time, quotes and other nerdy bits of info with customization options.">
+    <meta name="twitter:image" content="https://yourdomain.lol/images/bg.jpg">
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="https://yourdomain.lol/images/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://yourdomain.lol/images/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://yourdomain.lol/images/icons/favicon-16x16.png">
+    <link rel="manifest" href="https://yourdomain.lol/images/icons/site.webmanifest">
+    <link rel="mask-icon" href="https://yourdomain.lol/images/icons/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="https://yourdomain.lol/images/icons/favicon.ico">
+    <meta name="msapplication-TileColor" content="#000000">
+    <meta name="msapplication-config" content="https://yourdomain.lol/images/icons/browserconfig.xml">
+    <meta name="theme-color" content="#000000">
+</head>
+
+<body>
+    <!-- Background Video -->
+    <video autoplay muted loop id="background-video">
+        <source src="videos/matrix.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <!-- Black Overlay -->
+    <div class="overlay"></div>
+
+    <!-- Content -->
+    <div class="container">
+        <h1><p class="menu-icon"><i class="fa-solid fa-bars" id="menu-toggle"></i></p>Tab Dash<span class="blinking-cursor">█</span></h1>
+        <div id="time" class="time"></div>
+        <div id="date" class="date"></div>
+        <div class="ip-container">
+            <span id="ip-address" class="ip-address">Your Public IP: Loading...</span>
+            <i class="fa-solid fa-copy copy-ip" id="copy-ip"></i>
+        </div>
+
+        <!-- Video Options -->
+        <div class="quote" id="video-options">root@local: /etc/tabdash/config/video_opt.ini:</div>
+
+        <!-- Video Selection Buttons -->
+        <div class="video-buttons">
+            <button class="video-button" data-video="matrix.mp4">./matrix.mp4</button>
+            <button class="video-button" data-video="glitch.mp4">./glitch.mp4</button>
+            <button class="video-button" data-video="lotsofterminals.mp4">./term.mp4</button>
+            <button class="video-button" data-video="brokentv.mp4">./broken_tv.mp4</button>
+            <button class="video-button" data-video="spectrum.mp4">./spectrum.mp4</button>
+        </div>
+
+        <!-- Audio Options -->
+        <div class="quote" id="audio-options">root@local: /etc/tabdash/config/audio_opt.ini</div>
+
+        <!-- Audio Selection Buttons -->
+        <div class="audio-buttons">
+            <button class="audio-button" data-audio="mouse.mp3">./mouse.mp3</button>
+            <button class="audio-button" data-audio="keyboard.mp3">./keyboard.mp3</button>
+            <button class="audio-button" data-audio="keyboard-and-mouse.mp3">./m_and_k.mp3</button>
+            <button class="audio-button" data-audio="epic.mp3">./fucking-epic.mp3</button>
+        </div>
+
+        <!-- Quote -->
+        <div class="quote" id="quote-container">
+            root@local: /home/user/quotes/config/quote.sh
+            <div id="quote-box" class="quote-box">
+                <span id="quote"></span>
+            </div>
+        </div>
+
+        <!-- Environment Details -->
+        <div class="environment-details">
+            <div class="env-title">
+                <i alt="Copy displayed browser data to clipboard." title="Copy displayed browser data to clipboard." id="copy-browser" class="fa-solid fa-clipboard clipboard-icon env-copy-icon"></i>
+                <span id="browser-name">
+                    <strong>Browser Info</strong>:
+                </span>
+            </div>
+            <div id="browser-info" class="browser-info">
+                <div id="browser"></div>
+                <div id="user-agent"></div>
+                <div id="browser-dimensions"></div>
+                <div id="browser-plugins"></div>
+            </div>
+
+            <div class="env-title">
+                <i alt="Copy displayed OS data to clipboard." title="Copy displayed OS data to clipboard." id="copy-os" class="fa-solid fa-clipboard clipboard-icon env-copy-icon"></i>
+                <span id="os-name">
+                    <strong>Operating System</strong>:
+                </span>
+            </div>
+            <div id="os-info" class="os-info">
+                <div id="os"></div>
+                <div id="os-version"></div>
+                <div id="os-architecture"></div>
+                <div id="os-language"></div>
+                <div id="os-online-status"></div>
+            </div>
+
+            <div class="env-title">
+                <i alt="Copy displayed network data to clipboard." title="Copy displayed network data to clipboard." id="copy-network" class="fa-solid fa-clipboard clipboard-icon env-copy-icon"></i>
+                <span id="network-title">
+                    <strong>Network Information</strong>:
+                </span>
+            </div>
+            <div id="network-info" class="network-info">
+                <div id="net-range"></div>
+                <div id="network"></div>
+                <div id="version"></div>
+                <div id="city"></div>
+                <div id="region-code"></div>
+                <div id="country-code"></div>
+                <div id="latitude"></div>
+                <div id="longitude"></div>
+                <div id="timezone"></div>
+                <div id="utc-offset"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/scripts.js"></script>
+
+</body>
+
+</html>
