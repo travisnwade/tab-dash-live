@@ -9,8 +9,13 @@
 - **💻 "What’s My IP?"** – Sometimes, we just need our public IP real quick nah wut i mean?
 - **✨ Random Quotes** – Enlightening (?) dev quotes pop up for those who think they needed inspiration but maybe didn’t.
 - **🎬 Backgrounds** – Choose from glitchy videos that make you look way more legit than you are.
+
+![Hide UI](repo-srcs/background-changing.gif)
+
 - **🎶 Sounds** - Mouse, keyboard and epic sounds to make it sound like you're actually working.
 - **🙈 Hide the UI** - Hide and show the UI by pressing "H". Chads can full screen with F11, then "H". 🤓
+
+![Hide UI](repo-srcs/hide-ui.gif)
 
 ## Deploy to Netlify
 
