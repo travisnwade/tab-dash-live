@@ -21,7 +21,7 @@ If you wanted to deploy to Netlify, this button below will clone this repo exact
 
 All you need is something that can serve static web files. S3, Netlify, your dusty Power Edge T320.
 
-Go to the releases page and download that fat zip.
+Go to the [releases](https://github.com/travisnwade/tab-dash-live/releases) page and download that fat zip.
 Unzip that ish to your web root.
 Map your domain to this web hosting box you got.
 Give it a SSL cert, Let's Encrypt or whatever.
